@@ -1,22 +1,24 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 import pickle
+import joblib
 import os
 import numpy as np
 
 app = Flask(__name__)
 CORS(app)
 
-# Load model and vectorizer from pickle files
+# Load the model and vectorizer
 model_path = "model.pkl"
 vectorizer_path = "vectorizer.pkl"
 
+
 # Load the model and vectorizer
 with open(model_path, 'rb') as model_file:
-    model = pickle.load(model_file)
+    model = joblib.load(model_file)
 
 with open(vectorizer_path, 'rb') as vectorizer_file:
-    vectorizer = pickle.load(vectorizer_file)
+    vectorizer = joblib.load(vectorizer_file)
 
 @app.route('/api/check-spam', methods=['POST'])
 def check_spam():
