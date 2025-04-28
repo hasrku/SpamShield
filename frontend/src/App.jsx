@@ -14,13 +14,14 @@ const App = () => {
     const [isAnalyzing, setIsAnalyzing] = useState(false);
     const [result, setResult] = useState(null);
     const textareaRef = React.useRef(null);
+    const serverUrl = import.meta.env.VITE_API_URL;
 
     const handleDetect = async () => {
         if (!email) return;
         setIsAnalyzing(true);
 
         try {
-            const response = await fetch("http://localhost:5000/api/check-spam", {
+            const response = await fetch(`${serverUrl}/api/check-spam`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
