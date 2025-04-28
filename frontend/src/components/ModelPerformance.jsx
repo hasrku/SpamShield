@@ -142,7 +142,7 @@ const PerformanceMetric = ({ label, value, colorClass, index }) => {
 const ModelPerformance = () => {
     const metrics = [
         { label: "Precision", value: 98, color: "bg-gradient-to-r from-blue-500 to-indigo-500" },
-        { label: "Recall", value: 94, color: "bg-gradient-to-r from-purple-500 to-indigo-500" },
+        { label: "Recall", value: 94, color: "bg-gradient-to-r from-blue-500 to-indigo-500" },
         { label: "F1 Score", value: 96, color: "bg-gradient-to-r from-indigo-500 to-blue-500" },
     ];
 
@@ -169,7 +169,7 @@ const ModelPerformance = () => {
     return (
         <>
             <motion.h2
-                className="text-3xl font-bold text-center mb-10 bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-purple-500"
+                className="text-3xl font-bold text-center mb-10 bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-purple-400"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
@@ -179,7 +179,7 @@ const ModelPerformance = () => {
             </motion.h2>
 
             <motion.div
-                className="grid grid-cols-1 md:grid-cols-3 gap-6"
+                className="grid grid-cols-1 md:grid-cols-3 gap-6 mx-auto max-w-5xl"
                 variants={containerVariants}
                 initial="hidden"
                 whileInView="visible"

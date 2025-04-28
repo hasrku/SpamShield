@@ -42,9 +42,9 @@ const Header = () => {
                     className="flex items-center gap-2"
                 >
                     <div>
-                        <RiRobot2Fill className="text-2xl text-indigo-400" />
+                        <RiRobot2Fill className="text-2xl text-indigo-300" />
                     </div>
-                    <span className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-purple-500">
+                    <span className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-purple-400">
                         SpamShield AI
                     </span>
                 </a>

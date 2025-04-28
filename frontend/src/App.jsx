@@ -82,7 +82,7 @@ const App = () => {
                 transition={{ duration: 0.5 }}
             >
                 <motion.h1
-                    className="text-5xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-purple-500"
+                    className="text-5xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-purple-400"
                     variants={fadeIn}
                 >
                     SpamShield AI
@@ -100,7 +100,7 @@ const App = () => {
                 <Element name="demo-section">
                     <motion.div
                         id="demo-section-top"
-                        className="mt-10 lg:mt-16 px-4 sm:px-8 md:px-16 lg:px-32 xl:px-60"
+                        className="mt-10 lg:mt-16 px-1 sm:px-8 md:px-16 lg:px-32 xl:px-60"
                         variants={fadeIn}
                         transition={{ delay: 0.2 }}
                     >
@@ -124,7 +124,7 @@ const App = () => {
                                     <div className="space-y-4">
                                         <Textarea
                                             ref={textareaRef}
-                                            className="min-h-32 resize-y text-gray-200 bg-black/30 text-base sm:text-lg p-3 sm:p-4"
+                                            className="min-h-32 resize-y text-gray-200 bg-black/30 text-base sm:text-lg p-4 sm:p-4"
                                             placeholder="Enter email content here..."
                                             value={email}
                                             onChange={(e) => setEmail(e.target.value)}
@@ -260,7 +260,7 @@ const App = () => {
                 </Element>
 
                 <Element name="info-section">
-                    <div className="mt-24 mb-10 mx-5 lg:mx-60">
+                    <div className="mt-24 mb-10 ">
                         <ModelPerformance />
                     </div>
                 </Element>

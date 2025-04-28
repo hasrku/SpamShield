@@ -63,7 +63,7 @@ const Features = () => {
     return (
         <div className="mt-24 max-w-5xl mx-auto">
             <motion.h2
-                className="text-3xl font-bold text-center mb-4 bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-purple-500"
+                className="text-3xl font-bold text-center mb-4 bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-purple-400"
                 variants={titleVariants}
                 initial="hidden"
                 whileInView="visible"
