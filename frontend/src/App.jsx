@@ -3,7 +3,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
-import { FiCheckCircle, FiAlertTriangle, FiMail, FiArrowDown } from "react-icons/fi";
+import { FiCheckCircle, FiAlertTriangle, FiMail } from "react-icons/fi";
+import { FaGithub } from "react-icons/fa6";
 import { AnimatedBackground, Header, ScrollToTopButton, FeatureCard, ModelPerformance, Features } from "@/components";
 import { Element, Link } from "react-scroll";
 import { toast } from "sonner";
@@ -267,11 +268,19 @@ const App = () => {
                 {/* Footer */}
                 <div className="w-full h-1 bg-black/30"></div>
                 <motion.footer
-                    className="mt-8 mb-8 text-center text-gray-400 text-sm"
+                    className="mt-8 mb-8 flex items-center justify-center text-center text-gray-400 text-sm"
                     variants={fadeIn}
                     transition={{ delay: 0.4 }}
                 >
-                    © {new Date().getFullYear()} &nbsp; SpamShield AI
+                    <span>© {new Date().getFullYear()} &nbsp; SpamShield AI&nbsp;&nbsp;&nbsp;-&nbsp;</span>
+                    <span>
+                        <a
+                            href="https://github.com/hasrku/"
+                            className="flex justify-center items-center"
+                        >
+                            &nbsp; @hasrku
+                        </a>
+                    </span>
                 </motion.footer>
             </motion.div>
         </div>
