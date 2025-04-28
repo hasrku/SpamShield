@@ -31,7 +31,7 @@ const Header = () => {
 
     return (
         <motion.header
-            className="fixed top-0 left-0 right-0 z-50 bg-black/30 backdrop-blur-md border-b border-gray-800"
+            className="fixed md:px-30 top-0 left-0 right-0 z-50 bg-black/30 backdrop-blur-md border-b border-gray-800"
             initial={{ y: -100, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.2, duration: 0.5 }}
