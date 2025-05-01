@@ -143,7 +143,7 @@ const ModelPerformance = () => {
     const metrics = [
         { label: "Precision", value: 98, color: "bg-gradient-to-r from-blue-500 to-indigo-500" },
         { label: "Recall", value: 94, color: "bg-gradient-to-r from-blue-500 to-indigo-500" },
-        { label: "F1 Score", value: 96, color: "bg-gradient-to-r from-indigo-500 to-blue-500" },
+        { label: "F1 Score", value: 96, color: "bg-gradient-to-r from-blue-500 to-indigo-500" },
     ];
 
     const containerVariants = {
