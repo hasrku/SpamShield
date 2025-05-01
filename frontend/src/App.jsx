@@ -1,12 +1,11 @@
 import React, { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { FiCheckCircle, FiAlertTriangle, FiMail } from "react-icons/fi";
-import { FaGithub } from "react-icons/fa6";
-import { AnimatedBackground, Header, ScrollToTopButton, FeatureCard, ModelPerformance, Features } from "@/components";
-import { Element, Link } from "react-scroll";
+import { AnimatedBackground, Header, ScrollToTopButton, ModelPerformance, Features, ConfidenceBar } from "@/components";
+import { Element } from "react-scroll";
 import { toast } from "sonner";
 import { Toaster } from "@/components/ui/toaster";
 
@@ -35,11 +34,10 @@ const App = () => {
             }
 
             const data = await response.json();
-
+            console.log(data);
             setResult({
                 isSpam: data.isSpam,
                 confidence: parseFloat(data.confidence.toFixed(1)),
-                features: data.features,
             });
         } catch (error) {
             console.error("Error analyzing email:", error);
@@ -206,6 +204,10 @@ const App = () => {
                                     className="overflow-hidden"
                                 >
                                     <CardFooter className="flex flex-col p-2 border-t border-gray-800">
+                                        <ConfidenceBar
+                                            confidence={result.confidence}
+                                            isSpam={result.isSpam}
+                                        />
                                         <motion.div
                                             className="flex items-center justify-center mb-4"
                                             initial={{ opacity: 0, y: 20 }}
