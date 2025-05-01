@@ -19,6 +19,9 @@ A React application with a Flask backend that detects spam emails using a machin
 ### 1. Frontend Setup
 
 ```bash
+# Navigate to the frontend directory
+cd frontend
+
 # Install dependencies
 npm install
 
